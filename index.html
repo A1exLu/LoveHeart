@@ -55,10 +55,6 @@
 			var _rotation = 0;
 			var timeOnShapePath = 0;
 			
-			var audio = document.getElementById("meetPlayer");
-			document.addEventListener('touchstart', function(){ Safari必须事件来播放
-			    audio.play();
-			}, false);
 			init();
 			animate();
 
@@ -66,7 +62,11 @@
 
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
-
+				
+				var audio = document.getElementById("meetPlayer");
+				document.addEventListener('touchstart', function(){
+				    audio.play();
+				}, false);
 
                 //相机
 				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 1000);
