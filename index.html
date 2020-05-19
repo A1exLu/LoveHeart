@@ -28,7 +28,7 @@
 		<!-- load the font file from canvas-text -->
 
 		<script src="helvetiker_regular.typeface.js"></script>
-		<audio controls autoplay="autoplay" loop="loop" style="display:none;">
+		<audio controls id="meetPlayer" autoplay="autoplay" loop="loop" style="display:none;">
 		<source src="meet.mp3" type="audio/mpeg" />
 		hmmm not work
 		</audio>
@@ -54,7 +54,11 @@
 			var heartShape, particleCloud, sparksEmitter, emitterPos;
 			var _rotation = 0;
 			var timeOnShapePath = 0;
-
+			
+			var audio = document.getElementById("meetPlayer");
+			document.addEventListener('touchstart', function(){ Safari必须事件来播放
+			    audio.play();
+			}, false);
 			init();
 			animate();
 
